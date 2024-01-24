@@ -1,0 +1,27 @@
+modLoader = "javafml"
+loaderVersion = "[43,)"
+license = "GNU GPLv2"
+[[mods]]
+    modId = "lunacyadditions"
+    version = "0.0.1-1.19.2"
+    displayName = "Lunacy Additions"
+    logoFile = "lunacy2logo.png"
+    credits = "Fandwyn for making the Lunacy Mod Pack"
+    authors = "gmifflen"
+    description = '''
+    This mod is just some additions for the Lunacy Mod Pack
+    '''
+
+[[dependencies.lunacyadditions]]
+    modId = "forge"
+    mandatory = true
+    versionRange = "[43,)"
+    ordering = "NONE"
+    side = "BOTH"
+
+[[dependencies.lunacyadditions]]
+    modId = "minecraft"
+    mandatory = true
+    versionRange = "[1.19.2,1.20)"
+    ordering = "NONE"
+    side = "BOTH"
