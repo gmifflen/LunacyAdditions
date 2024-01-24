@@ -1,5 +1,6 @@
 package ca.gmifflen.lunacyadditions;
 
+import ca.gmifflen.lunacyadditions.items.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -13,29 +14,31 @@ import org.slf4j.Logger;
 
 @Mod( LunacyAdditions.MOD_ID )
 public class LunacyAdditions {
-    public static final String MOD_ID = "lunacyadditions";
-    private static final Logger LOGGER = LogUtils.getLogger();
+  public static final String MOD_ID = "lunacyadditions";
+  private static final Logger LOGGER = LogUtils.getLogger();
 
-    public LunacyAdditions() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+  public LunacyAdditions() {
+    IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        modEventBus.addListener( this::commonSetup );
+    ModItems.register( modEventBus );
 
-        MinecraftForge.EVENT_BUS.register( this );
+    modEventBus.addListener( this::commonSetup );
+
+    MinecraftForge.EVENT_BUS.register( this );
+
+  }
+
+  private void commonSetup( final FMLCommonSetupEvent event ) {
+
+  }
+
+  @Mod.EventBusSubscriber( modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT )
+  public static class ClientModEvents {
+    @SubscribeEvent
+    public static void onClientSetup( FMLClientSetupEvent event ) {
 
     }
 
-    private void commonSetup( final FMLCommonSetupEvent event ) {
-
-    }
-
-    @Mod.EventBusSubscriber( modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT )
-    public static class ClientModEvents {
-        @SubscribeEvent
-        public static void onClientSetup( FMLClientSetupEvent event ) {
-
-        }
-
-    }
+  }
 
 }
