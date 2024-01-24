@@ -15,12 +15,14 @@ println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty '
 minecraft {
 //  mappings channel: 'official', version: '1.19.2'
   mappings channel: 'parchment', version: '2022.11.27-1.19.2'
-  runs {
+    runs {
     client {
       workingDirectory project.file('run')
       property 'forge.logging.markers', 'REGISTRIES'
       property 'forge.logging.console.level', 'debug'
       property 'forge.enabledGameTestNamespaces', 'lunacyadditions'
+      property 'mixin.env.remapRefMap', 'true'
+      property 'mixin.env.refMapRemappingFile', "${buildDir}/createSrgToMcp/output.srg"
       mods {
         lunacyadditions {
           source sourceSets.main
@@ -36,6 +38,8 @@ minecraft {
       property 'forge.logging.markers', 'REGISTRIES'
       property 'forge.logging.console.level', 'debug'
       property 'forge.enabledGameTestNamespaces', 'lunacyadditions'
+      property 'mixin.env.remapRefMap', 'true'
+      property 'mixin.env.refMapRemappingFile', "${buildDir}/createSrgToMcp/output.srg"
       mods {
         lunacyadditions {
           source sourceSets.main
@@ -51,6 +55,8 @@ minecraft {
       property 'forge.logging.markers', 'REGISTRIES'
       property 'forge.logging.console.level', 'debug'
       property 'forge.enabledGameTestNamespaces', 'lunacyadditions'
+      property 'mixin.env.remapRefMap', 'true'
+      property 'mixin.env.refMapRemappingFile', "${buildDir}/createSrgToMcp/output.srg"
       mods {
         lunacyadditions {
           source sourceSets.main
@@ -65,6 +71,8 @@ minecraft {
       workingDirectory project.file('run')
       property 'forge.logging.markers', 'REGISTRIES'
       property 'forge.logging.console.level', 'debug'
+      property 'mixin.env.remapRefMap', 'true'
+      property 'mixin.env.refMapRemappingFile', "${buildDir}/createSrgToMcp/output.srg"
       args '--mod', 'lunacyadditions', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
       mods {
         lunacyadditions {
@@ -94,6 +102,10 @@ repositories {
 dependencies {
   minecraft 'net.minecraftforge:forge:1.19.2-43.3.0'
   implementation fg.deobf("curse.maven:embeddium-908741:5034476")
+  implementation fg.deobf("curse.maven:canary-665658:5042386")
+  implementation fg.deobf("curse.maven:saturn-670986:5020331")
+  implementation fg.deobf("curse.maven:pluto-682881:4469704")
+  implementation fg.deobf("curse.maven:smooth-boot-reloaded-633412:5016277")
 
 }
 
