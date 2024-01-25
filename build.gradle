@@ -5,7 +5,7 @@ plugins {
   id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 
-version = '0.0.1-1.19.2'
+version = '1.0.0-1.19.2'
 group = 'ca.gmifflen.lunacyadditions'
 archivesBaseName = 'lunacyadditions'
 
@@ -101,11 +101,11 @@ repositories {
 
 dependencies {
   minecraft 'net.minecraftforge:forge:1.19.2-43.3.0'
-  implementation fg.deobf("curse.maven:embeddium-908741:5034476")
-  implementation fg.deobf("curse.maven:canary-665658:5042386")
-  implementation fg.deobf("curse.maven:saturn-670986:5020331")
-  implementation fg.deobf("curse.maven:pluto-682881:4469704")
-  implementation fg.deobf("curse.maven:smooth-boot-reloaded-633412:5016277")
+//  implementation fg.deobf("curse.maven:embeddium-908741:5034476")
+//  implementation fg.deobf("curse.maven:canary-665658:5042386")
+//  implementation fg.deobf("curse.maven:saturn-670986:5020331")
+//  implementation fg.deobf("curse.maven:pluto-682881:4469704")
+//  implementation fg.deobf("curse.maven:smooth-boot-reloaded-633412:5016277")
 
 }
 

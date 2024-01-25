@@ -3,7 +3,7 @@ loaderVersion = "[43,)"
 license = "GNU GPLv2"
 [[mods]]
 modId = "lunacyadditions"
-version = "0.0.1-1.19.2"
+version = "1.0.0-1.19.2"
 displayName = "Lunacy Additions"
 logoFile = "lunacy2logo.png"
 credits = "Fandwyn for making the Lunacy Mod Pack"
