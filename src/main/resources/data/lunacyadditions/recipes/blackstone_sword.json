@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "B",
+    "B",
+    "S"
+  ],
+  "key": {
+    "B": {
+      "tag": "lunacyadditions:blackstone_tool_materials"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "lunacyadditions:blackstone_sword",
+    "count": 1
+  }
+}

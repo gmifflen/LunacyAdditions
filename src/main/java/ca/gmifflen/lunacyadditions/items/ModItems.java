@@ -22,7 +22,7 @@ public class ModItems {
           .attackDamage( 5 )
           .attackSpeed( 1.6f )
           .fireResistant( true )
-          .tier(Tiers.BLACKSTONE)
+          .tier( Tiers.BLACKSTONE )
           .build()
   );
 
@@ -32,10 +32,11 @@ public class ModItems {
   }
 
   public static class Tiers {
-    public static final Tier BLACKSTONE = new ForgeTier( 1,
+    public static final Tier BLACKSTONE = new ForgeTier(
+        0,
         131,
-        4f,
-        1,
+        0,
+        0,
         5,
         null,
         () -> Ingredient.of( Blocks.BLACKSTONE.asItem() )
